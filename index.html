@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cloud Computing semester exam study hub with concise notes, real-life examples, topic search and revision tracking.">
+  <meta name="theme-color" content="#0b1020">
+  <title>Cloud Computing — Semester Study Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Cloud Computing Study Hub home">
+      <span class="brand-mark">☁</span><span>Cloud<span class="brand-light">Study</span></span>
+    </a>
+    <div class="top-actions">
+      <button class="icon-btn" id="themeToggle" title="Toggle theme" aria-label="Toggle theme">☼</button>
+      <a class="top-link" href="#revision">Revision tracker <span>↗</span></a>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> SEMESTER EXAM PREPARATION · 5 UNITS</div>
+        <h1>Cloud computing,<br><em>made understandable.</em></h1>
+        <p class="hero-desc">Your complete study space for definitions, concepts, comparisons and real-life examples — organized topic by topic.</p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#study">Explore the syllabus <span>→</span></a>
+          <button class="secondary-btn" id="continueBtn">Continue learning <span>↗</span></button>
+        </div>
+        <div class="hero-meta"><span>✦ Short explanations</span><span>✦ Real-world examples</span><span>✦ Progress tracking</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="cloud-core"><span>☁</span><small>CLOUD</small></div>
+        <div class="float-card float-server"><span class="mini-icon">▤</span><div><b>Compute</b><small>Virtual resources</small></div><i></i></div>
+        <div class="float-card float-storage"><span class="mini-icon">◫</span><div><b>Storage</b><small>Data anywhere</small></div><i></i></div>
+        <div class="float-card float-network"><span class="mini-icon">⌘</span><div><b>Network</b><small>Connected systems</small></div><i></i></div>
+        <div class="art-dot dot-a"></div><div class="art-dot dot-b"></div><div class="art-dot dot-c"></div>
+      </div>
+    </section>
+
+    <section class="stats-grid" id="study">
+      <div class="stat-card"><span class="stat-icon purple">▦</span><div><strong id="unitCount">05</strong><small>Complete units</small></div></div>
+      <div class="stat-card"><span class="stat-icon blue">◈</span><div><strong id="topicCount">—</strong><small>Study topics</small></div></div>
+      <div class="stat-card"><span class="stat-icon green">✓</span><div><strong id="doneCount">0</strong><small>Topics completed</small></div></div>
+      <div class="stat-card"><span class="stat-icon orange">⌁</span><div><strong id="percentCount">0%</strong><small>Overall progress</small></div></div>
+    </section>
+
+    <section class="study-layout">
+      <aside class="sidebar">
+        <div class="side-heading">YOUR SYLLABUS <span>5 UNITS</span></div>
+        <nav id="unitNav" class="unit-nav" aria-label="Units"></nav>
+        <div class="sidebar-note"><span>✦</span><div><b>Study tip</b><p>Understand the definition first, then remember the example. Use the check button when you finish a topic.</p></div></div>
+      </aside>
+
+      <section class="content-area">
+        <div class="content-top">
+          <div><div class="eyebrow" id="unitEyebrow">UNIT 01</div><h2 id="unitTitle">Introduction to Cloud Computing</h2><p id="unitSubtitle"></p></div>
+          <div class="unit-progress"><div class="progress-label"><span>UNIT PROGRESS</span><b id="unitProgressText">0%</b></div><div class="progress-track"><div id="unitProgressBar"></div></div></div>
+        </div>
+        <div class="toolbar">
+          <label class="searchbox"><span>⌕</span><input id="searchInput" type="search" placeholder="Search any topic, keyword or example…" autocomplete="off"><kbd>⌘ K</kbd></label>
+          <select id="filterSelect" aria-label="Filter topics"><option value="all">All topics</option><option value="todo">Not completed</option><option value="done">Completed</option></select>
+        </div>
+        <div class="topic-summary" id="topicSummary"></div>
+        <div id="topicList" class="topic-list"></div>
+        <div class="empty-state hidden" id="emptyState"><span>⌕</span><h3>No topics found</h3><p>Try another keyword or change the filter.</p></div>
+        <div class="unit-footer"><button class="outline-btn" id="prevUnit">← Previous unit</button><button class="primary-btn" id="nextUnit">Next unit <span>→</span></button></div>
+      </section>
+    </section>
+
+    <section class="revision-section" id="revision">
+      <div class="section-heading"><div><div class="eyebrow">YOUR LEARNING JOURNEY</div><h2>Revision tracker</h2><p>Keep track of the topics you have studied. Your progress is saved in this browser.</p></div><button class="reset-btn" id="resetProgress">Reset progress ↺</button></div>
+      <div class="revision-card">
+        <div class="revision-main"><div class="revision-ring" id="revisionRing"><div><strong id="ringPercent">0%</strong><small>COMPLETED</small></div></div><div><h3>You're making progress.</h3><p id="revisionMessage">Start with Unit 1 and mark topics complete as you go.</p><div class="overall-track"><div id="overallBar"></div></div></div></div>
+        <div id="revisionUnits" class="revision-units"></div>
+      </div>
+    </section>
+
+    <section class="exam-tips">
+      <div class="tips-icon">✧</div><div><div class="eyebrow">EXAM STRATEGY</div><h2>Learn it. Connect it. Explain it.</h2><p>For a strong semester answer: write a clear definition, explain the key points, add a small diagram where relevant, and finish with a practical example.</p></div>
+      <a href="#study" class="text-link">Back to study ↑</a>
+    </section>
+    <footer><a class="brand footer-brand" href="#"><span class="brand-mark">☁</span><span>Cloud<span class="brand-light">Study</span></span></a><span>Built for focused semester preparation.</span><span>Study smart · Stay consistent</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
